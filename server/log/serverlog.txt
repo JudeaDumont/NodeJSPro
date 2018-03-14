@@ -1,0 +1,607 @@
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:24:15 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:25:05 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:25:55 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:26:14 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:27:03 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:27:54 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:28:43 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:29:33 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+Error: BAD CCT REDISSUBSCRIBER MESSAGING: SyntaxError: Unexpected token { in JSON at position 47{"INIFILE":"ini file testing from redis flood"}{: Thu Dec 14 2017 20:30:23 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad CCT Subscriber Messaging
+[Sat Dec 23 2017 19:36:44 GMT-0700 (Mountain Standard Time)] Times Really Stale in Past Twenty Four Hours: 3
+
+[Sat Dec 23 2017 19:36:44 GMT-0700 (Mountain Standard Time)] Times Really Stale in Past Twenty Four Hours: 2
+
+[Sun Dec 24 2017 19:36:49 GMT-0700 (Mountain Standard Time)] Times Really Stale in Past Twenty Four Hours: 2
+
+[Mon Dec 25 2017 19:36:54 GMT-0700 (Mountain Standard Time)] Times Really Stale in Past Twenty Four Hours: 1
+
+[Mon Dec 25 2017 19:36:54 GMT-0700 (Mountain Standard Time)] Times Really Stale in Past Twenty Four Hours: 2
+
+Error: TypeError: Cannot read property 'then' of undefined: Tue Dec 26 2017 12:38:46 GMT-0700 (Mountain Standard Time)
+
+Error: TypeError: Cannot read property 'then' of undefined
+: Tue Dec 26 2017 12:38:46 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Nodejs Server Bad HTTP Response Errors
+Error: TypeError: Cannot read property 'then' of undefined
+: Tue Dec 26 2017 12:39:07 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Nodejs Server Bad HTTP Response Errors
+Error: TypeError: Cannot read property 'then' of undefined
+: Tue Dec 26 2017 12:40:10 GMT-0700 (Mountain Standard Time)
+
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20172:43:58PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"5","PRI_ADCCP_MSG_RCVD":"8","SEC_ADCCP_MSG_SENT":"1","SEC_ADCCP_MSG_RCVD":"3","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 14:43:59 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 14:43:59 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD STATUSERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 6"YEAR":"2017","TIME1":"257/24672998","TIME2":"257/24672999","TIME3":"257/24672999","TIME4":"142/24672999","AZ":"64.15102208228569","EL":"82.45268907469321","RANGE":"INVALID","RRATE":"INVALID","XMTR":"DUMMYLOAD","M34":"OFF","SAB":"8","ANTMODE":"ATK","CMDBUFF":"0","ACTIVE":"PRI","ECHO_MODE":"DISABLED","AGC1":"0x76","AGC2":"0x00","AGC3":"0x00","AGC4":"0x00","RWS":"Off","IDLE_MODE":"STones","CMD_RATE":"39","CMD_ENABLED":"No","CMD_MODE":"3","AZ_DELTA":"3.951025415602359","EL_DELTA":"2.4536890663599085","RANGE_DELTA":"8708.4116754165","PCMSIM_ENABLED":"FALSE","SV_CMDS_SENT":"4","SV_CMDS_RCVD":"4","AGC_VALUE":"80"}: Tue Dec 26 2017 14:44:33 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Tue Dec 26 2017 14:44:33 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Status ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: BAD REDISFLOOD STATUSERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 6"YEAR":"2017","TIME1":"257/24857810","TIME2":"257/24857811","TIME3":"257/24857811","TIME4":"142/24857811","AZ":"66.14861321567177","EL":"79.61546037952343","RANGE":"INVALID","RRATE":"INVALID","XMTR":"DUMMYLOAD","M34":"OFF","SAB":"22","ANTMODE":"ATK","CMDBUFF":"15","ACTIVE":"PRI","ECHO_MODE":"DISABLED","AGC1":"0x76","AGC2":"0x00","AGC3":"0x00","AGC4":"0x00","RWS":"Off","IDLE_MODE":"STones","CMD_RATE":"175","CMD_ENABLED":"No","CMD_MODE":"4","AZ_DELTA":"5.94861654898844","EL_DELTA":"-0.38353962880988135","RANGE_DELTA":"2078.588211743127","PCMSIM_ENABLED":"FALSE","SV_CMDS_SENT":"18","SV_CMDS_RCVD":"19","AGC_VALUE":"80"}: Tue Dec 26 2017 14:47:38 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Tue Dec 26 2017 14:47:38 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Status ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20172:57:09PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"3","PRI_ADCCP_MSG_RCVD":"5","SEC_ADCCP_MSG_SENT":"2","SEC_ADCCP_MSG_RCVD":"0","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 14:57:09 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 14:57:09 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20172:59:50PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"1","PRI_ADCCP_MSG_RCVD":"1","SEC_ADCCP_MSG_SENT":"0","SEC_ADCCP_MSG_RCVD":"0","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 14:59:51 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 14:59:51 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:01:31PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"5","PRI_ADCCP_MSG_RCVD":"7","SEC_ADCCP_MSG_SENT":"5","SEC_ADCCP_MSG_RCVD":"4","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:01:32 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:01:32 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Tue Dec 26 2017 15:01:41 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:04:47PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"5","PRI_ADCCP_MSG_RCVD":"7","SEC_ADCCP_MSG_SENT":"4","SEC_ADCCP_MSG_RCVD":"5","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:04:47 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:04:47 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:27:17PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"0","PRI_ADCCP_MSG_RCVD":"8","SEC_ADCCP_MSG_SENT":"4","SEC_ADCCP_MSG_RCVD":"6","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:27:17 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:27:17 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:28:59PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"1","PRI_ADCCP_MSG_RCVD":"7","SEC_ADCCP_MSG_SENT":"0","SEC_ADCCP_MSG_RCVD":"2","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:28:59 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:28:59 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:29:52PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"2","PRI_ADCCP_MSG_RCVD":"5","SEC_ADCCP_MSG_SENT":"4","SEC_ADCCP_MSG_RCVD":"0","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:29:53 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:29:53 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:35:25PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"2","PRI_ADCCP_MSG_RCVD":"0","SEC_ADCCP_MSG_SENT":"0","SEC_ADCCP_MSG_RCVD":"2","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:35:26 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:35:26 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:37:14PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"1","PRI_ADCCP_MSG_RCVD":"8","SEC_ADCCP_MSG_SENT":"1","SEC_ADCCP_MSG_RCVD":"6","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:37:15 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:37:15 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:38:05PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"0","PRI_ADCCP_MSG_RCVD":"5","SEC_ADCCP_MSG_SENT":"4","SEC_ADCCP_MSG_RCVD":"6","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:38:06 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:38:06 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:40:36PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"4","PRI_ADCCP_MSG_RCVD":"5","SEC_ADCCP_MSG_SENT":"0","SEC_ADCCP_MSG_RCVD":"7","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:40:36 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:40:36 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:41:46PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"3","PRI_ADCCP_MSG_RCVD":"3","SEC_ADCCP_MSG_SENT":"3","SEC_ADCCP_MSG_RCVD":"1","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:41:46 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:41:46 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:43:46PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"5","PRI_ADCCP_MSG_RCVD":"5","SEC_ADCCP_MSG_SENT":"3","SEC_ADCCP_MSG_RCVD":"2","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:43:46 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:43:46 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:48:28PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"5","PRI_ADCCP_MSG_RCVD":"6","SEC_ADCCP_MSG_SENT":"2","SEC_ADCCP_MSG_RCVD":"4","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:48:29 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:48:29 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:50:39PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"5","PRI_ADCCP_MSG_RCVD":"0","SEC_ADCCP_MSG_SENT":"5","SEC_ADCCP_MSG_RCVD":"5","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:50:39 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:50:39 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:53:40PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"3","PRI_ADCCP_MSG_RCVD":"7","SEC_ADCCP_MSG_SENT":"5","SEC_ADCCP_MSG_RCVD":"6","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:53:40 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:53:40 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:54:10PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"3","PRI_ADCCP_MSG_RCVD":"8","SEC_ADCCP_MSG_SENT":"5","SEC_ADCCP_MSG_RCVD":"5","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:54:10 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:54:10 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 15:56:18 GMT-0700 (Mountain Standard Time)
+
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20173:56:18PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"2","PRI_ADCCP_MSG_RCVD":"3","SEC_ADCCP_MSG_SENT":"1","SEC_ADCCP_MSG_RCVD":"0","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 15:56:18 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20174:06:37PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"3","PRI_ADCCP_MSG_RCVD":"8","SEC_ADCCP_MSG_SENT":"5","SEC_ADCCP_MSG_RCVD":"5","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 16:06:37 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 16:06:37 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20174:45:10PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"1","PRI_ADCCP_MSG_RCVD":"2","SEC_ADCCP_MSG_SENT":"5","SEC_ADCCP_MSG_RCVD":"6","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 16:45:10 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 16:45:10 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20174:49:42PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"2","PRI_ADCCP_MSG_RCVD":"2","SEC_ADCCP_MSG_SENT":"1","SEC_ADCCP_MSG_RCVD":"6","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 16:49:43 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 16:49:43 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20174:50:44PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"2","PRI_ADCCP_MSG_RCVD":"1","SEC_ADCCP_MSG_SENT":"3","SEC_ADCCP_MSG_RCVD":"7","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 16:50:45 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 16:50:45 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/26/20174:52:04PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"4","PRI_ADCCP_MSG_RCVD":"2","SEC_ADCCP_MSG_SENT":"0","SEC_ADCCP_MSG_RCVD":"8","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Tue Dec 26 2017 16:52:04 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 16:52:04 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Tue Dec 26 2017 16:52:59 GMT-0700 (Mountain Standard Time)
+
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Tue Dec 26 2017 16:52:59 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 16:53:07 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Status Messages: Tue Dec 26 2017 16:53:07 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Tue Dec 26 2017 16:54:50 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 16:55:01 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Tue Dec 26 2017 16:55:01 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: REDISFLOOD Failing to Give Update Messages: Tue Dec 26 2017 17:00:59 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Tue Dec 26 2017 17:01:00 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: Redis Subscriber Client Connection Errors
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 09:04:42 GMT-0700 (Mountain Standard Time)
+
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 09:04:42 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 09:04:46 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 09:04:46 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: Redis Subscriber Client Connection Errors
+[Wed Dec 27 2017 13:02:42 GMT-0700 (Mountain Standard Time)] Times Really Stale in Past Twenty Four Hours: 3
+
+[Wed Dec 27 2017 13:02:42 GMT-0700 (Mountain Standard Time)] Times Really Stale in Past Twenty Four Hours: 3
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 16:08:13 GMT-0700 (Mountain Standard Time)
+
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 16:08:13 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 16:08:18 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 16:08:18 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: Redis Subscriber Client Connection Errors
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:12:38 GMT-0700 (Mountain Standard Time)
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:12:38 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:35 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:15:41 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:15:49 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:15:54 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:15:54 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/27/20175:16:50PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"2","PRI_ADCCP_MSG_RCVD":"8","SEC_ADCCP_MSG_SENT":"5","SEC_ADCCP_MSG_RCVD":"5","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Wed Dec 27 2017 17:16:50 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:16:50 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Subscriber Client Connection Errors
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:17:09 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:17:09 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/27/20175:17:21PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"5","PRI_ADCCP_MSG_RCVD":"8","SEC_ADCCP_MSG_SENT":"2","SEC_ADCCP_MSG_RCVD":"5","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Wed Dec 27 2017 17:17:22 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:17:22 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: BAD REDISFLOOD UPDATEERR MESSAGING: SyntaxError: Unexpected token : in JSON at position 9"CMD_SRC":"KS252","CMD_DST":"CCS","CMD_ECHO":"DISABLE","CMD_TERM":"FALSE","PRIOPEN":"FALSE","PRICONNECT":"FALSE","SECOPEN":"FALSE","SECCONNECT":"FALSE","SYSTIME":"12/27/20175:17:59PM","CLIENTS":"RED-IGC3M-W-CP","PRI_ADCCP_MSG_SENT":"3","PRI_ADCCP_MSG_RCVD":"5","SEC_ADCCP_MSG_SENT":"4","SEC_ADCCP_MSG_RCVD":"5","PRI_CONNECT_FAILURE":"FALSE","SEC_CONNECT_FAILURE":"FALSE","TASKSTATUS":"RUNNING"}: Wed Dec 27 2017 17:18:00 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:18:00 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Bad REDISFLOOD Update ERR Messaging
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:18:27 GMT-0700 (Mountain Standard Time)
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:18:27 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:18:32 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:18:32 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:18:46 GMT-0700 (Mountain Standard Time)
+
+Error: REDIS ERROR ON PULLING UPDATE:
+: Wed Dec 27 2017 17:18:46 GMT-0700 (Mountain Standard Time)
+
+Error: REDIS ERROR ON PULLING STATUS:
+: Wed Dec 27 2017 17:18:46 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Recovered From: Redis Status Pull Errors
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:18:52 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Update Pull Errors
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:18:52 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:19:03 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:19:09 GMT-0700 (Mountain Standard Time)
+
+Error: REDIS ERROR ON PULLING STATUS:
+: Wed Dec 27 2017 17:19:09 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Recovered From: Redis Status Pull Errors
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:21:42 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:21:50 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:21:50 GMT-0700 (Mountain Standard Time)
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:21:53 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 17:25:34 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 17:25:34 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:56:05 GMT-0700 (Mountain Standard Time)
+
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 17:56:05 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 18:04:34 GMT-0700 (Mountain Standard Time)
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 18:04:34 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 18:07:04 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 18:07:31 GMT-0700 (Mountain Standard Time)
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Wed Dec 27 2017 18:07:31 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Wed Dec 27 2017 18:07:38 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Wed Dec 27 2017 18:07:38 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: Redis Subscriber Client Connection Errors
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:05:03 GMT-0700 (Mountain Standard Time)
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:05:03 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Thu Dec 28 2017 09:05:11 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Thu Dec 28 2017 09:05:11 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:05:29 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Update Messages: Thu Dec 28 2017 09:05:42 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Thu Dec 28 2017 09:05:42 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:06:03 GMT-0700 (Mountain Standard Time)
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:06:03 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Thu Dec 28 2017 09:06:20 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Thu Dec 28 2017 09:06:20 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:06:25 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Thu Dec 28 2017 09:06:52 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Thu Dec 28 2017 09:06:52 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:07:02 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:07:17 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Thu Dec 28 2017 09:07:23 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Thu Dec 28 2017 09:07:23 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages
+Recovered From: Redis Subscriber Client Connection Errors
+Error: !! REDIS SUBSCRIBER CLIENT THROWING ERRORS !!
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:07:57 GMT-0700 (Mountain Standard Time)
+
+Error: redisClientErrorsAbort
+Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+CONNECTION ERROR
+: Thu Dec 28 2017 09:07:57 GMT-0700 (Mountain Standard Time)
+
+Recovered From: Redis Client Connection Errors
+Error: REDISFLOOD Failing to Give Update Messages: Thu Dec 28 2017 09:08:00 GMT-0700 (Mountain Standard Time)
+
+Error: REDISFLOOD Failing to Give Status Messages: Thu Dec 28 2017 09:08:00 GMT-0700 (Mountain Standard Time)
+
+Recovered From: REDISFLOOD Failing to Give Update Messages
+Recovered From: REDISFLOOD Failing to Give Status Messages

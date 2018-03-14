@@ -1,0 +1,9 @@
+Every X number of milliseconds the nodejs server pulls from the redis server.
+Upon pulling from the redis server if the message is the same as the last pulled message,
+then the staleness for that particular message type increments.
+
+If the message of the nodejs server is different than the message it was last time then
+the staleness resets to its leniency value.
+
+The message will only be reported as stale to the client sif the staleness reaches a value above the zero.
+

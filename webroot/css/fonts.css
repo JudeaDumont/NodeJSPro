@@ -1,0 +1,166 @@
+/* fonts.css - define fonts stored in server */
+
+/* font-weight conventions from https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight:
+     100	Thin (Hairline)
+     200	Extra Light (Ultra Light)
+     300	Light
+     400	Normal
+     500	Medium
+     600	Semi Bold (Demi Bold)
+     700	Bold
+     800	Extra Bold (Ultra Bold)
+     900	Black (Heavy)
+ */
+
+/* --------------- */
+/* --- AGENCY --- */
+
+@font-face {
+    font-family: 'Agency';
+    src: url('../fonts/Agency-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Agency';
+    src: url('../fonts/Agency-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* --------------------- */
+/* --- EARTH ORBITER --- */
+
+@font-face {
+    font-family: 'Earth Orbiter';
+    src: url('../fonts/EarthOrbiter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Earth Orbiter';
+    src: url('../fonts/EarthOrbiter-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Earth Orbiter';
+    src: url('../fonts/EarthOrbiter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Earth Orbiter';
+    src: url('../fonts/EarthOrbiter-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+/* Earth Orbiter Condensed */
+@font-face {
+    font-family: 'Earth Orbiter Condensed';
+    src: url('../fonts/EarthOrbiterCondensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Earth Orbiter Condensed';
+    src: url('../fonts/EarthOrbiterCondensed-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+/* Earth Orbiter Expanded */
+@font-face {
+    font-family: 'Earth Orbiter Expanded';
+    src: url('../fonts/EarthOrbiterExpanded.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Earth Orbiter Expanded';
+    src: url('../fonts/EarthOrbiterExpanded-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* ----------------- */
+/* --- OPEN SANS --- */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+/* Open Sans Condensed */
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../fonts/OpenSansCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../fonts/OpenSansCondensed-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../fonts/OpenSansCondensed-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}

@@ -1,0 +1,177 @@
+/* styleGuide.css - General styles conforming to EUX Style Guide */
+/* --- TEXT & COLOR BASICS ---
+   W3C: use em and % for font sizes, allows user to adjust text size; cf. https://www.w3schools.com/css/css_font.asp
+   SATCOM: use open_sansregular, etc. for font; cf. css/SATCOM/css/satcom.css
+
+   CCT colors from AJ:
+   White  #E6E6E6 = rgb(230,230,230) - text
+   Gray   #9F9FA0 = rgb(159,159,160) - borders, grayed-out items
+   Gray2  #B3B3B3 = rgb(179,179,179) - clock font, slightly darker so it doesn't overpower
+   Steel  #253F54 = rgb(37,63,84) - banner background
+   Steel2 #182836 = rgb(24,40,54) - light background, around edges
+   Dark   #0C141B = rgb(12,20,27) - dark background, inside main panels
+   Dark2  #0E1A24 = rgb(14,26,36) - lighter dark background, inside sub-panels
+ */
+@import 'fonts.css'; /* defs for Agency, Earth Orbiter, Open Sans on server */
+
+body {
+    background: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%; /* 16px cross-browser default, adjusts if user changes browser's text size */
+    color: #E6E6E6;
+}
+
+button { /* TODO: only for testing ??? */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #253F54;
+    color: #E6E6E6;
+}
+
+#wrapper {
+    background: #182836;
+}
+
+header {
+    color: #B3B3B3;
+}
+
+.body-bg, .light-bg {
+    background-color: #182836;
+}
+
+.panel-bg, .dark-bg {
+    background-color: #0C141B;
+}
+
+
+/* --- PANELS ---
+ * Main panel styles to hold a control or display.
+ */
+
+/* Patterns that will match this panel style
+  <div id="something-panel">...</div>
+  <div id="somethingPanel">...</div>
+  <div id="something" class="panel">...</div>
+ */
+.panel,
+[id$=-panel],
+[id$=Panel] {
+    background-color: #0C141B;
+    border: 1px solid #9F9FA0;
+    border-radius: 8px;
+    margin: 0;
+    padding: 6px;
+    position: relative;
+}
+/* subtler border with alpha fade, for outer elements to be less obtrusive */
+.panel.fade-border, [id$=-panel].fade-border, [id$=Panel].fade-border {
+    border-color: rgba(159, 159, 160, 0.4);
+}
+
+/* Title bar for a panel - applies to first <h1> inside the panel
+  <div id="my-panel" class="titled">
+    <h1><span>Title As First Elt</span></h1>
+    ...
+  </div>
+ */
+.panel.titled > h1:first-of-type,
+[id$=-panel].titled > h1:first-of-type,
+[id$=Panel].titled > h1:first-of-type {
+    font: 1rem 'Earth Orbiter', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    top: -0.5em; /* shift banner up half a line */
+    text-align: center;
+    left: 0; /* full width while centered puts banner text in center */
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.panel.titled, [id$=-panel].titled, [id$=Panel].titled {
+    margin-top: 2em;
+    padding-top: calc(1em + 1ex);
+}
+
+.panel.titled > h1:first-of-type span,
+[id$=-panel].titled > h1:first-of-type span,
+[id$=Panel].titled > h1:first-of-type span {
+    background-color: #253F54;
+
+    border-radius: 0.3em;
+    padding: 1ex 2em;
+}
+
+/* --- PANEL, 2nd type ---
+ * Smaller "panel2" styles to hold sub-panels.
+ */
+
+/* Patterns that will match this panel style
+  <div id="something-panel2">...</div>
+  <div id="somethingPanel2">...</div>
+  <div id="something" class="panel2">...</div>
+ */
+.panel2,
+[id$=-panel2],
+[id$=Panel2] {
+    background-color: #0E1A24;
+    border: 1px solid #9F9FA0;
+    border-radius: 8px;
+    margin: 0;
+    padding: 6px;
+    position: relative;
+}
+/* subtler border with alpha fade, for crowded elements to be less obtrusive */
+.panel2.fade-border, [id$=-panel2].fade-border, [id$=Panel2].fade-border {
+    border-color: rgba(159, 159, 160, 0.4);
+}
+
+/* Title bar for a panel2 - applies to first <h1> inside the panel
+  <div id="my-panel2" class="titled">
+    <h1><span>Title As First Elt</span></h1>
+    ...
+  </div>
+ */
+.panel2.titled > h1:first-of-type,
+[id$=-panel2].titled > h1:first-of-type,
+[id$=Panel2].titled > h1:first-of-type {
+    font: 0.7rem 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    transform: translateY(-55%); /* shift banner up half a line (lines tend to ride low) */
+    text-align: left;
+    left: 6px; /* match parent's padding */
+    margin: 0;
+    padding: 0 0 0 1ex; /* left indent */
+}
+
+.panel2.titled, [id$=-panel2].titled, [id$=Panel2].titled {
+    margin-top: calc(1.7 * 0.7rem); /* one full banner height, in child's font size */
+    /*padding-top: 0.85em; !* half banner height: 1.7em / 2, slightly off due to h1's translateY(-55%) *!*/
+    padding-top: 0.7rem;    /* empirically works vs. half-banner height and h1's translateY(-55%) */
+}
+
+.panel2.titled > h1:first-of-type span,
+[id$=-panel2].titled > h1:first-of-type span,
+[id$=Panel2].titled > h1:first-of-type span {
+    background-color: #0E1A24;
+    border-radius: 0.3em;
+    border: 1px solid #9F9FA0;
+    padding: 0.35em 0.5em;  /* banner height is 1.7em @ inherited 0.7rem font-size */
+}
+
+/* MATTE for a panel2: put panel2's inside these
+  <div id="my-matte">
+    <div id="my-panel2">...</div>
+  </div>
+ */
+.matte,
+[id$=-matte],
+[id$=Matte] {
+    background-color: #0E1A24;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0.85em;
+    position: relative;
+}

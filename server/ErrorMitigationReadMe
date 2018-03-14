@@ -1,0 +1,44 @@
+Erroneous scenarios and possible mitigation:
+
+Redis errors:
+
+Redis errors are reported to the server.
+
+The server can save the state of the redis server to be sent to clients.
+
+Clients can use a combination of "data staleness" metrics along with error states
+such that operators can make decisions about the information.
+
+Data staleness refers to the amount of time that has passed while the status buffer
+has remained the same.
+
+If the staleness metric is very high but there are no Redis errors,
+that means the app is down (either expected or unexpected).
+
+When the staleness metric becomes high, the server can check a "downtime" queue in redis
+
+If the downtime is expected, then an app state would be saved to be read by clients.
+
+Operators would be notified within the UI that there is expected downtime currently.
+
+If there are no messages waiting in the "downtime" queue within the redis server,
+that means the "CCT" app is down unexpectedly and the operator would be informed of this.
+
+If the node server is down, the client would receive 503 http request errors,
+this can be used to provide the operator with decision making information (Nodejs is down).
+
+If the node server crashes, a process monitor would restart it. If the node server continually crashes,
+A counting mechanism would shut off the process monitor.
+
+If the configuration is empty because the CCT app is down, then the system may provide itself
+with the last valid configuration used at the discretion of the operator.
+
+Error propagation would occur through all interfaces of systems such that
+operators are promptly notified of error states.
+
+IMPORTANT NOTES ABOUT HOW ERRORS OCCUR:
+
+Errors in the status will most likely be caught serverside but if not, will potentially crash the server.
+
+Errors in the config message are propogated directly to the client. For this reason the client needs to be
+resilient against configuration errors vs the server which needs to be resilient against status errors.

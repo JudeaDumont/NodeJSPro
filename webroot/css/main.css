@@ -1,0 +1,995 @@
+/* main.css - main styles for CCT client */
+
+/* make it easy to change the box-sizing model on a DOM subtree */
+*, *::after, *::before {
+    box-sizing: inherit;
+
+}
+
+/* styles related to scrollbars; applies to Chrome only */
+::-webkit-scrollbar {
+    width: 10px;
+    /* NB: std width of all browsers' scroll bars is 17px;
+       Chrome compensates by leaving a small gap for smaller scrollbar widths so the layout works in FF too;
+       Larger widths will not line up in FF if they line up in Chrome.
+     */
+}
+::-webkit-scrollbar-track {
+    background: #182836;    /* Steel2 from styleGuide */
+}
+::-webkit-scrollbar-thumb {
+    background: #253f54;    /* Steel from styleGuide */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3464a7;    /* Same Blue as highlighted log table row */
+}
+
+/* --- TOP-LEVEL LAYOUT --- */
+
+html {
+    box-sizing: border-box;
+    height: 100%;   /* inherit main window size down to <body> */
+    min-height: 32rem;
+    margin: 0;
+    padding: 0;
+}
+body {  /* fills the screen behind #wrapper */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    pointer-events:none;
+}
+#wrapper {  /* contains the entire app at full height, with empty areas to left & right */
+    height: 100%;
+    width: 110vh;
+    margin: 0 auto;
+    padding: 12px 9px;
+    display: flex;
+    flex-direction: column;
+}
+#wrapper.cat4{
+    filter:blur(2px);
+}
+
+#message-wrapper{
+    width: 55vh;    /* half width of main #wrapper content area */
+    z-index: 1;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: transform 500ms;
+}
+#message-wrapper.cat4{
+    color:#bb1100;
+}
+#message-wrapper.active{
+    /* Aligning vertical center of banner to top border of #config-panel:
+       (bottom edge of banner is initially at top of window, just out of sight)
+       12px padding above + 67px header + 6px padding below + 1px border + 2em gap under header + 1px border
+            = 87px + 2em downward shift, puts bottom of banner at top border of #config-panel
+       then 50% translates down by half banner's height
+            = 87px + 2em + 50%
+    */
+    transform: translate(-50%, calc(87px + 2em + 50%));
+}
+#message-panel{
+    padding:1ex 2em;
+    text-align:center;
+}
+
+/* header/main/footer are a flex stack, with main absorbing all free height */
+header {
+    flex: none;
+    padding-bottom: 6px;    /* margin throws off flex, padding doesn't */
+    display: flex;  /* flex row for header items */
+    justify-content: space-between;
+}
+main {
+    flex: 1;
+}
+footer {
+    flex: none;
+    position: relative;
+    padding-top: 6px;
+    display: flex;  /* flex row for footer items */
+}
+
+
+/* --- HEADER elements --- */
+
+#braxtonLogoButton {
+    background: url("../img/BraxtonCCTLogo.png") bottom no-repeat;
+    background-size: cover;
+    width: 223px;   /* TODO: resize/reactivity vs. aspect ratio of dual image (hover img is in same file) */
+    height: 64px;
+    margin: auto 0;
+    /*cursor: pointer;*/    /* for later, drop-down menu */
+}
+/* for later, drop-down menu */
+/*
+#braxtonLogoButton:hover {
+    background-position: top;
+    background-color: #9F9FA0;
+}
+*/
+
+#systemTimePanel {
+    line-height: 53px;  /* height of connection panel when icons are 48px */
+    min-width: 24ex;
+}
+#systemTimeMatte {
+    padding-top:0;
+    padding-bottom:0;
+    background-color:#182836;
+    line-height: 2.25em;
+}
+#systemTimePanel div {
+    display: inline-block;
+    text-align: center;
+}
+#ddd-hh-mm-ss {
+    width: 13ex;
+}
+#sec-of-day {
+    width: 6ex;
+    margin-left: 2ex;
+}
+
+#connections-panel {
+    /* TODO: better way to stop inline-block contents from line-breaking when window shrinks */
+    min-width: 225px;
+}
+#connections-panel div {
+    display: inline-block;
+}
+#connections-panel:hover {
+    /* TODO: resolve hover/click question for connection icons */
+    /*filter: drop-shadow(0px 0px 1px rgba(118, 179, 255, .3));*/
+}
+
+.connectionIcon { /* default IDLE state for icons soc, cct, site */
+    width: 48px;
+    height: 48px;
+    background: no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+.connectionIcon:hover {
+    filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 1));
+}
+.connectionLink {
+    width: 24px;
+    height: 48px;
+    cursor: pointer;
+}
+.connectionLink:hover {
+    filter: drop-shadow(0px 0px 7px rgba(118, 179, 255, 1));
+}
+
+/* Icon & link state changes */
+#soc {
+    fill: transparent;
+    stroke: currentColor;
+    stroke-width: 6px;
+}
+#soc.idle{
+    color: #636363;
+}
+#soc.active{
+    color: #29ABE2;
+}
+#soc.unknown{
+    color: #636363;
+}
+#soc.error{
+    color: #ff1a1a;
+}
+
+#cct.idle {
+    background-image: url("../img/CCTIDLE.png");
+}
+#cct.active {
+    background-image: url("../img/CCT.png");
+}
+#cct.error {
+    background-image: url("../img/CCTFAILED.png");
+}
+#cct:hover {
+    background-image: url("../img/CCTHOVER1.png");
+}
+
+#site {
+    color: #636363;
+    --arc-color: currentColor;
+    fill:none;
+    stroke:currentColor;
+    stroke-width: 2px;
+}
+#site.active{
+    fill: currentColor;
+    color: #29ABE2;
+}
+#site.passive {
+    fill: currentColor;
+    color: #29ABE2;
+    --arc-color: transparent;
+}
+#site.active.degraded {
+    color: #F7931E;
+}
+#site.passive.degraded {
+    color: #F7931E;
+}
+#site.error {
+    color: #ff1a1a;
+}
+
+.connectionLink line {  /* default and IDLE state */
+    stroke: #636363;    /* gray */
+    stroke-width: 3;
+    stroke-dashoffset: 50;
+    stroke-dasharray: 5, 10, 5, 10, 5, 10, 5, 50;
+    transition: stroke-dashoffset 0.5s, stroke 0.25s;
+}
+.connectionLink.active line {
+    stroke: #29ABE2;    /* bright blue */
+    stroke-dashoffset: 0;
+}
+.connectionLink.error line {
+    stroke: red;
+    stroke-dashoffset: 0;
+}
+.connectionLink.degraded line {
+    stroke: #F7931E;    /* amber */
+    stroke-dashoffset: 0;
+}
+
+#auto-settings-icons {
+    position: relative;
+    min-width: 124px;
+}
+#auto-manual-icon, #settings-icon {
+    display: inline-block;
+    height: 100%;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+#auto-manual-icon {
+    background: url('../img/robotArmBlue.png') no-repeat center;
+    background-size: contain;
+    width: 60px;    /* 245w163h bg img, trial & error for compatible size in header */
+    margin-right: 1ex;
+}
+#settings-icon {
+    background: url('../img/settingsBlue.png') no-repeat center;
+    background-size: contain;
+    width: 48px;    /* 132w111h bg img, trial & error for compatible size in header */
+}
+#auto-manual-icon:hover, #settings-icon:hover {
+    filter: none;
+}
+
+
+/* --- MAIN elements --- */
+
+#main-mask {
+    /* rides inside main's padding to provide size and overflow-masking for sliding content */
+    position: absolute;
+    left: 1.35em;
+    right: 1.35em;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+#slide-main {   /* holds config stacked on top of map/gauges, slides up and down to show/hide config */
+    height: 100%;
+    transition: transform 0.5s; /* open quickly; let user see new info right away */
+}
+#slide-main.closed {
+    transform: translateY(-45%);    /* MUST match -height of #config-wrapper */
+    transition: transform 2s; /* close slowly; give user time to see what is being taken away */
+}
+#config-wrapper {
+    height: 45%;    /* MUST match -translateY() of #slide-main.closed */
+    padding-top: 2em;   /* replace panel.titled margin-top with padding-top so height % can work */
+    position: relative;
+}
+#map-gauges {
+    height: 55%;    /* MUST match 100%-height of #config-wrapper */
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: calc(1em + 1ex) 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+            ". map-area ."
+            ". map-area ."
+            ". map-area ."
+            ". map-area ."
+            "monitors monitors monitors";
+}
+#gauges-wrapper {
+    grid-column: monitors-start / monitors-end;
+    grid-row: 2/5;
+}
+#gauges {
+    display:grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+            "clients-gauge . xmtr-gauge"
+            "task-status-gauge . ant-mode-gauge"
+            "sab-gauge . sv-cmds-gauge";
+}
+
+/* --- CONFIG panel & details --- */
+
+#config-panel {
+    height: 100%;
+    margin-top: 0;  /* suppress margin-top so parent can implement as padding-top */
+}
+#config-schematic { /* container riding under the config title banner to simplify inner coords */
+    height: 100%;
+    position: relative;
+}
+#config-schematic.stale .comm-device {
+    filter: blur(1px);
+}
+/* Details panel OPEN */
+.comm-device {
+    position: absolute;
+    width: 20%;
+    transition: transform 1s;
+    /* replace panel2.titled margin-top with padding-top so height % can work */
+    padding-top: calc(1.5 * 0.7rem);    /* 1.5 instead of panel2.titled's 1.7 to save a little space */
+}
+/* layout map -- details panel OPEN
+     X: 5% margin | 20% src-dev | 20% signal | 20% CCS stack | 35% details, including own left margin
+     Y: 2% margin | 47% primary | 2% margin | 47% secondary | 2% margin
+ */
+#src-device-matte {
+    left: 5%;
+    height: 60%;
+    top: 20%;   /* 1/2 of free space outside the height */
+}
+#primary-device-matte {
+    right: 35%;
+    height: 47%;
+    top: 2%;
+}
+#secondary-device-matte {
+    right: 35%;
+    height: 47%;
+    bottom: 2%;
+}
+#comm-signal {
+    position: absolute;
+    width: 20%;
+    left: 25%;
+    height: 60%;
+    top: 20%;
+    transition: transform 1s;
+    transform-origin: left; /* so scaleX() won't interfere with translateX() later */
+}
+#comm-signal svg {
+    width: 100%;
+    height: 100%;
+}
+
+.signal-path {
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+
+    /*animation: gradientChange 20s infinite alternate;*/
+}
+
+#signal-path {
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+    /*animation: gradientChange 20s infinite alternate;*/
+}
+.comm-device > div.titled {  /* the three device panel2's */
+    height: 100%;
+    margin-top: 0;  /* suppress margin-top so parent can reimplement as padding-top */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.comm-device.ops > div.titled, .comm-device.ops > div.titled h1 span {
+    /* TODO: show an "OPS" badge similar to the "titled" h1/span banner */
+    /*border-color: #29ABE2;  !* highlight OPS device *!*/
+}
+.comm-device.alt > div.titled, .comm-device.alt > div.titled h1 span {
+    /* TODO: show an "ALT" badge similar to the "titled" h1/span banner */
+    /*border-color: #444; !* mute the ALT device *!*/
+}
+.comm-device.ops > div.titled h1 span::after {
+    content: ' - OPS';  /* stopgap until we have a nice "OPS" badge */
+}
+.comm-device.alt > div.titled h1 span::after {
+    content: ' - ALT';  /* stopgap until we have a nice "ALT" badge */
+}
+.comm-device img,
+.comm-device .connection-svg{
+    height: 23%;
+}
+.comm-device.source img,
+.comm-device.source .connection-svg{
+    height: 18%;
+}
+img.traffic-arrow.blink {
+    filter: drop-shadow(0px 0px 4px #CFC);
+}
+img.traffic-arrow.warning {
+    filter: hue-rotate(290deg); /* turns green into amber */
+}
+img.traffic-arrow.inactive {
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+.connection-svg {
+    color: #9f9fa0;
+    stroke-width: 2px;
+}
+.connection-svg.conn-failed {
+    color: #ff1a1a;
+}
+img.power {
+    position: absolute;
+    top: 0;
+    right: 12px;    /* 1.5x border-radius of panel2 */
+    transform: translateY(-50%);
+}
+#config-details-mask {  /* mask lets details fly in from right without covering button */
+    position: absolute;
+    left: calc(65% + 1rem); /* 1rem is a margin from the schematic */
+    right: calc(1.5 * 2.2rem); /* 2.2em = "i" button width + matching left & right spacing, 1.5 = "i" larger font */
+    top: calc(1.5 * 0.5rem); /* 1.5 factor to match top margin of "i" button */
+    bottom: calc(1.5 * 0.5rem);
+    transition: transform 1s;
+    overflow: hidden;
+}
+#config-details {
+    height: 100%;
+    padding-left: 1rem;
+    border-left: 1px solid #9F9FA0;
+    transition: transform 1s;
+    overflow: auto; /* scroll bar when content gets tall, not default despite "auto" */
+    pointer-events:auto;
+}
+#config-details-btn {  /* "i" button */
+    font: 1.5rem "Times New Roman", serif;
+    font-style: italic;
+    text-align: center;
+    position: absolute;
+    right: 0.5em;   /* rel. to our larger "i" font size, em NOT rem! */
+    top: 0.5em;
+    width: 1.2em;
+    height: 1.2em;
+    background: transparent;
+    color: #29ABE2;
+    border: 1px solid #29ABE2;
+    border-radius: 6px;
+    transition: background 1s, color 1s, border-color 1s;
+    cursor: pointer;
+    pointer-events:auto;
+}
+/* Details panel CLOSED */
+/* layout map:
+     X: 17% margin | 20% src-dev | 26% signal | 20% CCS stack | 17% margin
+     Y: no change vs. panel open
+ */
+#config-panel.closed-details #src-device-matte {
+    /* move left edge from 5% to 17% = 12% of parent --> 12/20 = 60% of self */
+    /* (because transform uses % of self vs. everything else uses % of parent) */
+    transform: translateX(60%);
+}
+#config-panel.closed-details #primary-device-matte,
+#config-panel.closed-details #secondary-device-matte {
+    /* move right edge from 65% to 83% = 18% of parent --> 18/20 = 90% of self */
+    transform: translateX(90%);
+}
+#config-panel.closed-details #comm-signal {
+    /* move left edge from 25% to 37% = 12% of parent --> 12/20 = 60% of self */
+    /* rescale from 20% wide to 26%: 26/20 = 1.3 */
+    transform: translateX(60%) scaleX(1.3);
+}
+#config-panel.closed-details #config-details {
+    transform: translateX(calc(100% + 3px));    /* move whole self off screen, plus extra to cover the border */
+}
+#config-panel.closed-details #config-details-btn {
+    background: #29ABE2;
+    color: #0C141B;
+}
+
+#config-details-matte {
+    font-size: 0.7rem;
+    /* replace panel2.titled margin-top with padding-top so height % can work */
+    padding-top: calc(1.5 * 0.7rem);    /* 1.5 instead of panel2.titled's 1.7 to save a little space */
+    pointer-events:none;
+}
+#config-details-matte > div.titled:first-child {
+    margin-top: 0;  /* suppress margin, assign to parent's top padding; else we get too much empty space */
+}
+#config-details-matte table {
+    width: 100%;
+    border-spacing: 0;
+}
+#config-details-matte tr {
+    text-align: right;
+}
+#config-details-matte td {
+    text-transform: uppercase;
+}
+#config-details-matte td span {
+    background-color: #0C141B;
+    border: 1px solid rgba(159, 159, 160, 0.4);
+    border-radius: 4px;
+    margin: 0;
+    padding: 3px;
+    display: inline-block;
+    min-width: 45%;
+}
+#config-details button {
+    border:1px solid #636363;
+    pointer-events:auto;
+    cursor:pointer;
+    background: #9f9fa0;
+    border-radius: 4px;
+    color:#0E1A24;
+}
+#config-details button:hover {
+    background:#3464A7;
+}
+
+#monitorsSvg.monitorStaleVisual #monitorMask {
+    opacity: 0.5;
+}
+
+#monitorsSvg.monitorNotStaleVisual #monitorMask {
+    opacity: 0.0;
+}
+
+#ini-file {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    top: 4.5em;
+    right: 0.5em;
+    min-width: 32ex;
+    max-width: 40%;
+    padding: 1ex;
+    visibility: hidden;
+    overflow: auto;
+    z-index: 1;
+}
+#ini-file h1 {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+#ini-file.show {
+    visibility: visible;
+}
+
+#clients-gauge {
+    grid-area: clients-gauge;
+}
+#task-status-gauge {
+    grid-area: task-status-gauge;
+}
+#task-status-gauge-icon {
+    stroke:currentColor;
+    fill: currentColor;
+    color: #0071BC;
+}
+#task-status-gauge.running #task-status-gauge-icon {
+    color: green;
+}
+#task-status-gauge.failed #task-status-gauge-icon {
+    color: #bb1100;
+}
+#sab-gauge {
+    grid-area: sab-gauge;
+}
+
+.gaugeReading {
+    transform: rotate(90deg);
+}
+.gauge-value {
+    font: 18pt Agency, "Open Sans Condensed", sans-serif;
+    fill: #E6E6E6;
+}
+.gauge-label {
+    font: 20px "Earth Orbiter", "Open Sans", fantasy;
+    fill: #E6E6E6;
+}
+
+.emptyGauge svg{
+    opacity: 0.5;
+}
+
+.meter {
+    transform: rotate(90deg);
+}
+
+#map-wrapper {
+    height: 100%;
+}
+#map-area {
+    grid-area: map-area;
+}
+#map-area svg {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+}
+#home-loc {
+    --main-color: #29ABE2;
+    --dark-color: #0071BC;
+    --cross-color: #76B3FF;
+    stroke-width: 3;
+    pointer-events: auto;
+}
+#home-loc:hover {
+    fill: #0071BC;
+    stroke: #29ABE2;
+    filter: drop-shadow(0px 0px 7px rgba(118, 179, 255, 1));
+}
+#site-loc {
+    visibility: hidden;
+    pointer-events: auto;
+}
+#site-loc.show {
+    visibility: visible;
+    fill: #04C609;
+    stroke: green;
+    color: green;
+    stroke-width: 3;
+}
+#site-loc.show:hover {
+    fill: green;
+    stroke: #04C609;
+    filter: drop-shadow(0px 0px 7px rgba(118, 179, 255, 1));
+}
+.test-loc {
+    fill: beige;
+    stroke: brown;
+    stroke-width: 3;
+}
+.test-loc:hover {
+    fill: brown;
+    stroke: beige;
+    filter: drop-shadow(0px 0px 7px rgba(118, 179, 255, 1));
+}
+.map-arc {
+    visibility:hidden;
+    stroke: lightblue;
+    fill:none;
+    stroke-width: 1;
+    stroke-dasharray: 4 2 2 2;
+    stroke-dashoffset: 0;
+}
+@keyframes map-arc-traffic {
+    from {stroke-dashoffset: 0;}
+    to {stroke-dashoffset: 10;}
+}
+.show .map-arc{
+    visibility:visible;
+    animation-name: map-arc-traffic;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.map-arc.reversed {
+    stroke: yellow;
+}
+
+#xmtr-gauge {
+    grid-area: xmtr-gauge;
+}
+#xmtr-gauge-icon {
+    width:100px;
+    stroke-width:3px;
+    --tower-color: #636363;
+    --outer-color: #636363;
+    --inner-color: #636363;
+}
+#xmtr-gauge.active #xmtr-gauge-icon {
+    --tower-color: green;
+    --outer-color: green;
+    --inner-color: darkgreen;
+}
+#ant-mode-gauge {
+    grid-area: ant-mode-gauge;
+}
+#ant-mode-gauge-icon {
+    --arc-color: currentColor;
+    color: green;
+    fill: currentColor;
+    stroke: currentColor;
+}
+#ant-mode-gauge.emptyGauge #ant-mode-gauge-icon {
+    color: #636363;
+}
+#ant-mode-gauge.error #ant-mode-gauge-icon {
+    color: #bb1100;
+}
+#sv-cmds-gauge {
+    grid-area: sv-cmds-gauge;
+}
+.dials {
+    background-color:#182836;
+    margin:4px;
+    border-radius:12px;
+}
+.dials svg {
+    width: 100%;
+}
+
+
+/* --- MONITOR GRAPHS --- */
+#monitors {
+    grid-area: monitors;
+    align-self: center;
+}
+#monitorsSvg {
+    width: 100%;
+}
+#networkMonitorYLabels {
+    width: 10%;
+    height: 100%;
+}
+#netDiv {
+    width: 90%;
+    height: 100%;
+}
+#antDiv {
+    width: 100%;
+}
+#antennaMonitorGraphLines, #networkMonitorGraphLines {
+    border-radius: 15px;
+    background: black;
+    border: 2px solid #ababab;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* --- FOOTER elements --- */
+@keyframes arrowOpened {   /*animation sequence when log panel is open */
+    0% {transform: matrix(-1,0,0,-1,0,0);}
+    25% {transform: matrix(-1,0,0,-1,0,-3);}
+    75% {transform: matrix(-1,0,0,-1,0,3);}
+    100% {transform: matrix(-1,0,0,-1,0,0);}
+}
+
+@keyframes arrowClosed {   /*animation sequence when log panel is closed */
+    0% {transform: matrix(1,0,0,1,0,0);}
+    25% {transform: matrix(1,0,0,1,0,-3);}
+    75% {transform: matrix(1,0,0,1,0,3);}
+    100% {transform: matrix(1,0,0,1,0,0);}
+}
+
+#log-button-panel {
+    width: 75px;
+    height: 30px;
+    background-size: 100% 100%;
+    pointer-events:auto;
+    padding-top: 0.1em;
+    padding-right:0.6em;
+    text-align:right;
+    cursor: pointer;
+    -moz-user-select: none; /* make text unselectable even though the button is clickable */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#log-button-panel:hover {
+    color: #29ABE2;
+}
+
+#log-button-arrow {
+    position: absolute;
+    left:0.5em;
+    width: 23px;
+    background: url("../img/NEXTsolidunselectedup.png") center center no-repeat;
+    background-size: 20px;
+    transform: matrix(1,0,0,1,0,0); /* no change; here for transition purposes */
+    transition: transform 200ms;
+}
+
+#log-button-arrow.open {
+    transform:matrix(-1,0,0,-1,0,0); /* upside-down */
+}
+
+#log-button-panel:hover #log-button-arrow {
+    background-image:url("../img/NEXTsolidselectedup.png");
+    animation-name: arrowClosed;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#log-button-panel:hover #log-button-arrow.open {
+    animation-name: arrowOpened;
+}
+
+/* DEV ONLY: a few controls for testing/diagnostics */
+#dev-controls {
+    position: fixed;
+    width: 18em;
+    height: 25em;
+    padding: 0 1.5ex 1ex 1.5ex;
+    left: 1em;
+    top: 3in;
+    background: black;
+    border: 1px dotted green;
+    color: #0F0;
+    font: 10pt "Lucida Console", "Courier New", monospace;
+    opacity: 0.65;
+    resize: both;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events:auto;
+}
+#dev-controls button {
+    margin: 3px;
+}
+
+
+/* --- LOG PANEL --- */
+
+#log-display-panel {
+    position: fixed;
+    height: calc(1.5 * 25em);
+    bottom: calc(-1.5 * 25em - 6px);
+    left: calc(50% - 55vh + 90px);
+    transition: bottom 0.2s, clip-path 0.2s;
+    clip-path: inset(0);
+    cursor: move;
+    background: rgba(0, 0, 0, 0.8);
+    pointer-events:auto;
+}
+
+#log-display-panel h3,
+#log-display-panel2{
+    pointer-events: none;
+}
+
+#log-display-panel.open {
+    bottom: 70px;
+}
+
+#log-display-panel.closedX {
+    clip-path: inset(0 0 100% 100%);
+}
+
+#log-display-panel2 table {
+    width: 1060px;
+    height: 522px;
+    overflow: auto;
+    display: block;
+    line-height: 1.5;
+    cursor: initial;
+    pointer-events: auto;
+}
+
+#log-display-panel2 thead,
+#log-display-panel2 tbody {
+    display: block;
+}
+
+#log-display-panel2 tbody {
+    height: calc(1.5 * 20em);
+}
+
+#log-display-panel2 tr {
+    text-align: left;
+    vertical-align: text-top;
+    box-sizing: content-box;
+    width: 100%;
+    height: 31px;
+    outline: #0E1A24 solid thick;
+    background-color: #1b3f6e;
+    display: table;
+}
+
+#log-display-panel2 tr td {
+    padding-left: 24px; /* leave room for expand-collapse icon*/
+    pointer-events:auto;
+}
+
+#log-display-panel2 tr .shortMessage {
+    background: url("../img/NEXTsolidunselecteddown.png") 3px center no-repeat;
+    background-size: 15px;
+}
+
+#log-display-panel2 tr:hover .shortMessage{
+    background-image: url("../img/NEXTsolidselecteddown.png");
+}
+
+#log-display-panel2 tr .longMessage {
+    background: url("../img/NEXTsolidunselectedup.png") 3px 6px no-repeat;
+    background-size: 15px;
+}
+
+#log-display-panel2 tr:hover .longMessage{
+    background-image: url("../img/NEXTsolidselectedup.png");
+}
+
+#log-display-panel2 tr.expanded .shortMessage,
+#log-display-panel2 tr:not(.expanded) .longMessage{
+    display:none;
+}
+
+#log-display-panel2 tbody tr:hover {
+    background-color: #3464A7;
+}
+
+#log-display-panel2 tbody tr {
+    cursor: pointer;
+}
+
+.log-col-time {
+    width: 12ex;
+}
+
+.log-col-server {
+    width: 23ex;
+}
+
+.log-col-source {
+    width: 15ex;
+}
+
+thead .log-col-message {
+    width: calc(54ex + 17px);
+}
+
+.log-col-message {
+    width: 54ex;
+}
+
+.stackable {
+    z-index: 1;
+}
+
+.panel-title {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.panel-close-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    cursor: pointer;
+    pointer-events:auto;
+}
+
+.panel-close-x:hover {
+    color: #2AACE2;
+}
+
+#config-schematic.signalFlowing  #connectionPath {
+    display: block;
+}
+
+#config-schematic #connectionPath {
+    display: none;
+}
+
+#config-schematic #connectionPathNoFlow {
+    display: block;
+}
+
+#config-schematic.signalFlowing  #connectionPathNoFlow {
+    display: none;
+}

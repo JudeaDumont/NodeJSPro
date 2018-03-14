@@ -1,0 +1,17 @@
+{
+  "name": "acecct-gateway",
+  "version": "1.0.0",
+  "description": "HTTP/redis gateway, allows a web browser to talk to a redis server",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://bitbucket.braxtontech.com:8443/scm/feps/acecct.git",
+  "author": "Braxton EUX Group",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "lazy": "^1.0.11",
+    "redis": "^2.8.0",
+    "respawn": "^2.5.0"
+  }
+}

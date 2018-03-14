@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>AceCCT Prototype</title>
+    <link href='css/styleGuide.css' rel='stylesheet'/>
+    <link href='css/main.css' rel='stylesheet'/>
+
+    <!-- TODO: Periodically update d3 & Vue, to get latest browser support; freeze version in final deployment cycle -->
+    <script src="js/d3-4.11.0.js"></script>
+    <script src="js/vue-2.5.1.js"></script>
+
+    <!-- Braxton code, lowest dependency first -->
+    <!-- TODO: for production, consider bundling into one JS file. Possibly translate IIFE modules to ES6. -->
+    <script src="js/tools.js"></script>
+    <script src="js/httpClient.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- NO-SERVER MODE -- uncomment the next line to run without a server, simulating all HTTP messages. -->
+    <!--<script src="js/simServer.js"></script>  &lt;!&ndash; Must come after httpClient.js &ndash;&gt;-->
+
+    <!-- TEST-LOOP MODE -- uncomment the next line to run custom main loop for server testing. -->
+    <!--<script src="js/testMain.js"></script>-->
+</head>
+
+<body>
+
+<div id="message-wrapper" class="stackable" :class="bannerStyle">
+    <div id="message-panel">{{showMessage}}</div>
+</div>
+
+<div id="wrapper">
+    <header>
+        <div id="braxtonLogoButton"></div>
+
+        <div id="connections-panel" class="fade-border">
+            <svg id="soc" class="connectionIcon" :class="socStatus" shape-rendering="geometricPrecision">
+                <use href="../img/SOCicon.svg#SOCIcon"></use>
+            </svg>
+            <svg id="soc-to-cct" class="connectionLink" :class="socToCctStatus" viewBox="0 0 50 100" preserveAspectRatio="none" version="1.1">
+                <line x1="0" y1="90" x2="100" y2="90"></line>
+            </svg>
+            <div id="cct" class="connectionIcon" :class="cctStatus"></div>
+            <svg id="cct-to-site" class="connectionLink" :class="cctToSiteStatus" viewBox="0 0 50 100" preserveAspectRatio="none" version="1.1">
+                <line x1="0" y1="90" x2="100" y2="90"></line>
+            </svg>
+            <svg id="site" class="connectionIcon" :class="siteStatus">
+                <use href="../img/Siteicon.svg#SiteIcon"></use>
+            </svg>
+        </div>
+
+        <div id="systemTimePanel" class="fade-border">
+            <div id="systemTimeMatte">
+                <div id="ddd-hh-mm-ss">{{sysTimeString}}</div>
+                <div id="sec-of-day">{{secOfDayString}}</div>
+            </div>
+        </div>
+
+        <div id="auto-settings-icons">
+            <div id="auto-manual-icon"></div>
+            <div id="settings-icon"></div>
+        </div>
+    </header>
+
+    <main class="panel fade-border">
+        <div id="main-mask">    <!-- main's inner viewing area, through which we view the slide, masks the slide's overflow content -->
+            <div id="slide-main" class="closed">
+                <div id="config-wrapper">  <!-- invisible wrapper for layout sizing & spacing -->
+                    <div id="config-panel" class="titled" :class="detailsClass">
+                        <h1><span>Configuration</span></h1>
+                        <pre style="position: absolute;">{{siteText}}</pre>
+                        <div id="config-schematic" :class="schematicClasses">
+                            <comm-device v-bind="srcDeviceProps"></comm-device>
+                            <comm-device v-bind="primaryDeviceProps"></comm-device>
+                            <comm-device v-bind="secondaryDeviceProps"></comm-device>
+                            <div id="comm-signal">
+                                <svg viewBox="687 319 460 310" preserveAspectRatio="none">
+                                    <defs>
+                                        <radialGradient id="signal-gradient" cy="50%" r="120%">
+                                            <animate attributeName="cx"
+                                                     values="-10%;50%;"
+                                                     dur="1.5s" repeatCount="indefinite"></animate>
+                                            <stop offset="0%">
+                                                <animate attributeName="stop-color"
+                                                         values="white; steelblue; lightblue; white; white; white; white;"
+                                                         dur="1.5s" repeatCount="indefinite"></animate>
+                                            </stop>
+                                            <stop offset="25%">
+                                                <animate attributeName="stop-color"
+                                                         values="white; white; steelblue; lightblue; white; white; white;"
+                                                         dur="1.5s" repeatCount="indefinite"></animate>
+                                            </stop>
+                                            <stop offset="50%">
+                                                <animate attributeName="stop-color"
+                                                         values="white; white; white; steelblue; lightblue; white; white;"
+                                                         dur="1.5s" repeatCount="indefinite"></animate>
+                                            </stop>
+                                            <stop offset="75%">
+                                                <animate attributeName="stop-color"
+                                                         values="white; white; white; white; steelblue; lightblue; white; white;"
+                                                         dur="1.5s" repeatCount="indefinite"></animate>
+                                            </stop>
+                                            <stop offset="100%">
+                                                <animate attributeName="stop-color"
+                                                         values="white; white; white; white; white; steelblue; lightblue; white;"
+                                                         dur="1.5s" repeatCount="indefinite"></animate>
+                                            </stop>
+                                        </radialGradient>
+                                        <filter id="glowPath" x="0" y="-10" height="200">
+                                            <feGaussianBlur stdDeviation="7" result="blur1">
+                                            </feGaussianBlur>
+                                            <feComposite in="SourceGraphic" in2="blur1" operator="arithmetic" k1="10" k2="1"
+                                                         k3="1" k4="0"></feComposite>
+                                        </filter>
+                                    </defs>
+                                    <g id="connectionPath" stroke="url(#signal-gradient)">
+
+                                        <path id="signal-path" fill="transparent"
+                                              d="M 687,480 L 957,480 M 959.5 384.5 L 959.5 565.5 M 1000.5 353.5 L 1147 353.5 M 998 605.5 L 1147 605.5 M959.5,384.5c0-17.1,18.3-31,41-31 M959.5,565.5c0,22.1,20.1,40,45,40"></path>
+
+                                        <use href="#signal-path" filter="url(#glowPath)"></use>
+
+                                    </g>
+                                    <g stroke="gray">
+                                        <path class="signal-path" id="connectionPathNoFlow" fill="transparent"
+                                              d="M 687,480 L 957,480 M 959.5 384.5 L 959.5 565.5 M 1000.5 353.5 L 1143.5 353.5 M 998 605.5 L 1147 605.5 M959.5,384.5c0-17.1,18.3-31,41-31 M959.5,565.5c0,22.1,20.1,40,45,40"></path>
+                                    </g>
+
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="config-details-mask">
+                            <div id="config-details">
+                                <div id="config-details-matte">
+                                    <config-detail v-bind="ccsInfoProps"></config-detail>
+                                    <config-detail v-bind="boxStatusProps"></config-detail>
+                                    <config-detail v-bind="cmdPathProps"></config-detail>
+                                    <config-detail v-bind="miscProps"></config-detail>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="config-details-btn" @click="openCloseDetails()">i</div>
+                    </div>
+                </div>
+                <div id="map-gauges">
+                    <div id="gauges-wrapper">
+                        <div id="gauges">
+                            <dialGauge v-bind="clientsPropObj"></dialGauge>
+                            <iconGauge v-bind="taskStatusPropObj"></iconGauge>
+                            <dialGauge v-bind="sabPropObj"></dialGauge>
+                            <iconGauge v-bind="xmtrPropObj"></iconGauge>
+                            <iconGauge v-bind="antModePropObj"></iconGauge>
+                            <dialGauge v-bind="svCmdPropObj"></dialGauge>
+                        </div>
+                    </div>
+                    <div id="map-area" class="panel titled">
+                        <h1><span>Source / Destination</span></h1>
+                        <div id="map-wrapper">
+                            <svg :view-box.camel="svgViewBox">
+                                <image href="img/MAP.png" :x="imgBounds.x" :y="imgBounds.y" :width="imgBounds.width" :height="imgBounds.height"></image>
+                                <map-location v-bind="homeLoc"></map-location>  <!-- "home" is where the user is -->
+                                <map-location v-bind="siteLoc" :class="siteClass"></map-location>   <!-- the antenna site -->
+                                <map-arc v-bind="arcParams" :class="siteClass"></map-arc>
+                                <!-- Just testing some known locations... -->
+                                <!--<map-location v-for="loc in testLoc" v-bind="loc" class="test-loc" :key="`${loc.long},${loc.lat}`"></map-location>-->
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div id="monitors" class="monitor">
+                        <svg id="monitorsSvg" :view-box.camel="getViewBoxDimensions" preserveAspectRatio="none" :class="stalenessVisual">
+                            <g id="monitorsYAxisLabels" transform="translate(20,42)">
+                                <text fill="white" fill-opacity="1">
+                                    <tspan>10 pkts</tspan>
+                                    <tspan x="9" dy="20">8 pkts</tspan>
+                                    <tspan x="9" dy="20">6 pkts</tspan>
+                                    <tspan x="9" dy="20">4 pkts</tspan>
+                                    <tspan x="9" dy="20">2 pkts</tspan>
+                                </text>
+                            </g>
+                            <g id="networkMonitorLegend">
+                                <rect x="110" y="0" fill="lightblue" fill-opacity="1" width="15" height="13"></rect>
+                                <text x="135" y="13" fill="white" fill-opacity="1">Network Input</text>
+                                <rect x="310" y="0" fill="yellow" fill-opacity="1" width="15" height="13"></rect>
+                                <text x="335" y="13" fill="white" fill-opacity="1">Network Output</text>
+                            </g>
+                            <g id="networkMonitorGraphLines" transform="translate(100,16) scale(.90, .8)" stroke-width="2">
+                                <rect x="-5" y="0" width="760" height="151" rx="7" ry="7" stroke="silver"></rect>
+                                <g stroke-opacity="0.3">
+                                    <path d="M -5 25 L 754 25" stroke="white"></path>
+                                    <path d="M -5 50 L 754 50" stroke="white"></path>
+                                    <path d="M -5 75 L 754 75" stroke="white"></path>
+                                    <path d="M -5 100 L 754 100" stroke="white"></path>
+                                    <path d="M -5 125 L 754 125" stroke="white"></path>
+                                </g>
+                                <path :d="graphInput" stroke="lightblue" fill="lightblue" fill-opacity="0.5"></path>
+                                <path :d="graphOutput" stroke="yellow" fill="yellow" fill-opacity="0.5"></path>
+                            </g>
+                            <g id="networkMonitorXAxisLabels" transform="translate(100,139)">
+                                <text x="0" y="10" fill="white" fill-opacity="1">-12</text>
+                                <text x="105" y="10" fill="white" fill-opacity="1">-10</text>
+                                <text x="210" y="10" fill="white" fill-opacity="1">-8</text>
+                                <text x="315" y="10" fill="white" fill-opacity="1">-6</text>
+                                <text x="420" y="10" fill="white" fill-opacity="1">-4</text>
+                                <text x="525" y="10" fill="white" fill-opacity="1">-2</text>
+                                <text x="630" y="10" fill="white" fill-opacity="1">NOW</text>
+                            </g>
+                            <g id="antennaMonitorLegend" transform="translate(820,0)">
+                                <rect x="10" y="0" fill="white" fill-opacity="1" width="15" height="13"></rect>
+                                <text x="35" y="13" fill="white" fill-opacity="1">Azimuth</text>
+                                <rect x="210" y="0" fill="green" fill-opacity="1" width="15" height="13"></rect>
+                                <text x="235" y="13" fill="white" fill-opacity="1">Elevation</text>
+                                <rect x="410" y="0" fill="fuchsia" fill-opacity="1" width="15" height="13"></rect>
+                                <text x="435" y="13" fill="white" fill-opacity="1">Automatic Gain Control</text>
+                            </g>
+                            <g id="antennaMonitorGraphLines" transform="translate(820,16) scale(.90, .8)" stroke-width="2">
+                                <rect x="-5" y="0" width="760" height="151" rx="7" ry="7" stroke="silver"></rect>
+                                <g stroke-opacity="0.3">
+                                    <path d="M -5 25 L 754 25" stroke="white"></path>
+                                    <path d="M -5 50 L 754 50" stroke="white"></path>
+                                    <path d="M -5 75 L 754 75" stroke="white"></path>
+                                    <path d="M -5 100 L 754 100" stroke="white"></path>
+                                    <path d="M -5 125 L 754 125" stroke="white"></path>
+                                </g>
+                                <path :d="azimuthDeltaPath" stroke-width="6" stroke="#c0c0c0" stroke-opacity="0.8" fill-opacity="0.0"></path>
+                                <path :d="azimuthPath" stroke-width="2" stroke="#ffffff" stroke-opacity="1" fill-opacity="0.0"></path>
+                                <path :d="gainPath" stroke-width="6" stroke="fuchsia" stroke-opacity="0.8" fill-opacity="0.0"></path>
+                                <path :d="elevationDeltaPath" stroke-width="6"  stroke="green" stroke-opacity="0.8" fill-opacity="0.0"></path>
+                                <path :d="elevationPath" stroke-width="2" stroke="lime" stroke-opacity="1" fill-opacity="0.0"></path>
+                            </g>
+                            <g id="antennaMonitorXAxisLabels" transform="translate(820,139)">
+                                <text x="0" y="10" fill="white" fill-opacity="1">-12</text>
+                                <text x="105" y="10" fill="white" fill-opacity="1">-10</text>
+                                <text x="210" y="10" fill="white" fill-opacity="1">-8</text>
+                                <text x="315" y="10" fill="white" fill-opacity="1">-6</text>
+                                <text x="420" y="10" fill="white" fill-opacity="1">-4</text>
+                                <text x="525" y="10" fill="white" fill-opacity="1">-2</text>
+                                <text x="630" y="10" fill="white" fill-opacity="1">NOW</text>
+                            </g>
+                            <rect id="monitorMask" width="1500" height="150" fill="black">
+                            </rect>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ini-file" :class="viewerClass" class="panel fade-border">
+            <h1>Config File</h1>
+            <pre>{{displayString}}</pre>
+        </div>
+    </main>
+
+    <footer>
+        <div id="log-ctrl">
+            <div id="log-button-panel" class="light-bg" @click="showHide">
+                <span id="log-button-arrow" class="bobbing-on-parent-hover" :class="buttonIconClass">&nbsp;</span>&nbsp;&nbsp;
+                Log
+            </div>
+            <div id="log-display-panel" class="stackable" :class="panelClass" :style="panelStyle" v-draggable>
+                <h3 class="panel-title">Error Log</h3>
+                <h2 class="panel-close-x" @click="closeX">&times;</h2>
+                <div id="log-display-panel2">
+                    <table class="table">
+                        <tbody>
+                        <tr v-for="entry in modelLog.entries.filter(function(entry){return entry!==null})">
+                            <td v-if="entry.length < 135" >{{entry}}</td>
+                            <template v-else>
+                                <td class="shortMessage" onclick='this.parentElement.classList.add("expanded")'>{{entry.slice(0,132)}}...</td>
+                                <td class="longMessage" onclick='this.parentElement.classList.remove("expanded")'>{{entry}}</td>
+                            </template>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>  <!-- END #log-ctrl -->
+
+        <div id="dev-controls" style="/*display:none*/">
+            <p>dev controls</p>
+            <button onclick="CCT.main.start()">Start</button>
+            <button onclick="CCT.main.stop()">Stop</button>
+            <br/>
+            <button onclick="document.getElementById('slide-main').classList.toggle('closed')">Slide Config</button>
+            <button onclick="document.getElementById('config-panel').classList.toggle('closed-details')">Slide Details</button>
+            <br/>
+            <button onclick="CCT.display.iniFile.showHide()">INI test</button>
+            <p id="dev-output"></p>
+        </div>
+    </footer>
+</div>
+
+<!-- JS that needs to run after all DOM elements are created but before page loads -->
+<script>
+    CCT.tools.finalPageEltCalling();    // must be called from FINAL page elt, just before </body>
+    CCT.tools.stackableInit();
+</script>
+
+</body>
+</html>
